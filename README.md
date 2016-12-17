@@ -43,6 +43,32 @@ Run the demo app from the root of the project: `npm run demo.ios` or `npm run de
 ## API
 100% equal to [the `aws-sdk` module](https://www.npmjs.com/package/aws-sdk). Look at their docs and use TypeScript to make your life easier.
 
+To get you started, this is how you can require the plugin and pass your credentials:
+
+#### TypeScript
+```js
+import * as AWS from "nativescript-aws";
+import { Credentials } from "nativescript-aws";
+
+AWS.config.update({
+  region: AWS_region,
+  credentials: new Credentials(AWS_accessKeyId, AWS_secretAccessKey)
+});
+```
+
+#### JavaScript
+```js
+var AWS = require("nativescript-aws");
+
+AWS.config.update({
+  region: AWS_region,
+  credentials: {
+    accessKeyId: AWS_accessKeyId,
+    secretAccessKey: AWS_secretAccessKey
+  }
+});
+```
+
 ## Disclaimer
 I've tried to iron out all compatibility issues between AWS and NativeScript,
 but you may use some service that throws an error at runtime because it's `require`-ing some
