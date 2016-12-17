@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:Keyframes="nativescript-keyframes" loaded="pageLoaded">
+
+  <StackLayout horizontalAlignment="center">
+    <Label text="Please change the AWS keys in main-view-model.ts" class="message" textWrap="true"/>
+    <Button text="List S3 Bucket contents" tap="{{ listS3BucketContents }}" cssClass="button button-a"></Button>
+    <Button text="List Dynamo tables" tap="{{ listDynamoTables }}" cssClass="button button-b"></Button>
+    <Button text="Update Dynamo table" tap="{{ updateDynamoTable }}" cssClass="button button-c"></Button>
+  </StackLayout>
+
+</Page>
