@@ -9,6 +9,10 @@ A. Because you can't due to dependencies on Node and/or the browser (crypto, pat
 #### Q. So is this plugin not using the AWS JS SDK then?
 A. Oh yes it is but upon installation the plugin will modify a few bits in the AWS SDK so it's NativeScript-compatible.
 
+#### Q. Lol. Wut? Modify AWS?
+A. The main trick here is a `postinstall` hook that scans the `aws-sdk` module for `package.json` files,
+looks for `browser` configuration nodes, and find-replaces any matching `require()` calls in that package and its dependencies.
+
 #### Q. But doesn't browserify / Webpack solve this for us?
 A. Not in this case, at least not without further modifications. Feel free to submit a PR for a nicer implementation, but this is the best I could think of.
 
@@ -24,10 +28,10 @@ tns plugin add nativescript-aws
 ```
 
 Make sure you use TypeScript (as our demo app does), because this plugin exposes the AWS SDK's
-TypeScript definitions so you'll have an easier time interacting with Amazons services.
+TypeScript definitions so you'll have an easier time interacting with Amazon's services.
 
 ## Demo app
-Really, check [the demo](demo)! It shows how to interact with S3 and Dynamo,
+Really, check [the demo](demo/app/main-view-model.ts)! It shows how to interact with S3 and Dynamo,
 but you should be able to interact with all other AWS services as well.
 
 Run the demo app from the root of the project: `npm run demo.ios` or `npm run demo.android`.
@@ -41,5 +45,5 @@ Run the demo app from the root of the project: `npm run demo.ios` or `npm run de
 
 ## Disclaimer
 I've tried to iron out all compatibility issues between AWS and NativeScript,
-but you may use some service that throws an error at runtime because it's requiring some
-unsupported node module. Please open an issue in that case and I'll take a look!
+but you may use some service that throws an error at runtime because it's `require`-ing some
+unsupported node module. Please [open an issue](issues/new) in that case and I'll take a look!
