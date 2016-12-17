@@ -31,7 +31,7 @@ Make sure you use TypeScript (as our demo app does), because this plugin exposes
 TypeScript definitions so you'll have an easier time interacting with Amazon's services.
 
 ## Demo app
-Really, check [the demo](demo/app/main-view-model.ts)! It shows how to interact with S3 and Dynamo,
+Really, check [the demo](https://github.com/EddyVerbruggen/nativescript-aws/blob/master/demo/app/main-view-model.ts)! It shows how to interact with S3 and Dynamo,
 but you should be able to interact with all other AWS services as well.
 
 Run the demo app from the root of the project: `npm run demo.ios` or `npm run demo.android`.
@@ -46,4 +46,4 @@ Run the demo app from the root of the project: `npm run demo.ios` or `npm run de
 ## Disclaimer
 I've tried to iron out all compatibility issues between AWS and NativeScript,
 but you may use some service that throws an error at runtime because it's `require`-ing some
-unsupported node module. Please [open an issue](issues/new) in that case and I'll take a look!
+unsupported node module. Please [open an issue](https://github.com/EddyVerbruggen/nativescript-aws/issues/new) in that case and I'll take a look!
