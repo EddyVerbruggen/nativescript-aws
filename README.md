@@ -73,3 +73,6 @@ AWS.config.update({
 I've tried to iron out all compatibility issues between AWS and NativeScript,
 but you may use some service that throws an error at runtime because it's `require`-ing some
 unsupported node module. Please [open an issue](https://github.com/EddyVerbruggen/nativescript-aws/issues/new) in that case and I'll take a look!
+
+## Future work
+Working on a way to make NativeScript with virtually any Node module, inspired by this plugin.. will update this doc when more news is available.
