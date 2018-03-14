@@ -1,7 +1,6 @@
 # NativeScript AWS plugin
 
-> DEPRECATED! Please install `nativescript-nodeify` and [follow these instructions](https://github.com/EddyVerbruggen/nativescript-nodeify/blob/master/README.md#aws-sdk-or-amazon-cognito-identity-js-which-includes-aws-sdk).
-
+> DEPRECATED! Please either use [the AWS Native SDK plugin by Osei Fortune](https://github.com/triniwiz/nativescript-aws-sdk), or try `nativescript-nodeify` (which allows you to use the ASW JS SDK) and [follow these instructions](https://github.com/EddyVerbruggen/nativescript-nodeify/blob/master/README.md#aws-sdk-or-amazon-cognito-identity-js-which-includes-aws-sdk).
 
 ## OLD INSTRUCTIONS
 
